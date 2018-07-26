@@ -1,0 +1,30 @@
+<!-- components/navbar/navbar.component.html-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+         <!-- <a class="navbar-brand" href="/"><img src="/img/logo.png" width="25" height="25"></a> -->
+        <a class="navbar-brand" routerLink="/">Blog'z R Us</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+                <li><a routerLink="login">Login</a></li>
+                <li><a routerLink="user/new">Sign Up</a></li>
+
+                <li class=""><a><!-- <span><strong>{{loginName}}</strong> is Logged In</span> --></a>
+                </li>
+                <li><a href="">Logout</a></li>
+                <!-- <li><a >PlaceHoldr's Blogs</a></li> -->
+            <li><a>All Blog'z</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

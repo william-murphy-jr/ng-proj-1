@@ -1,0 +1,35 @@
+<!-- components/userform/userform.component.html-->
+<!-- Registration Page -->
+
+<div class="container">
+
+  <div class="col-sm-6 col-sm-offset-3">
+
+      <h1>Welcome to Murph'z Blogging Service</h1>
+      <h2>Register Now</h2>
+
+      <form id="frmUserProfile" method="POST" action="POST" (ngSubmit)="addNewUser()" enctype="application/x-www-form-urlencoded">
+
+          <input type="hidden" name="_method" value="{{method}}">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newUser.name" value="{{name}}">
+          </div>
+          <div class="form-group">
+              <label for="name">Password</label>
+              <input type="password" name="password" id="password"  class="form-control" [(ngModel)]="newUser.password" value="{{password}}">
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email"  class="form-control" [(ngModel)]="newUser.email" name="email" value="{{email}}">
+          </div>
+
+          <div class="form-group">
+              <button type="submit" class="btn btn-warning btn-lg">Sign Up</button>
+              <!-- <button type="submit" class="btn btn-warning btn-lg">{{buttonText}}</button> -->
+          </div>
+
+      </form>
+
+      </div>
+  </div>

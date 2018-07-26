@@ -1,0 +1,39 @@
+<!-- components/user/user.component.html-->
+
+<div  class="container">
+  <div class="col-md-8 col-md-offset-2" >
+      <h1>Murph'z Blogging Service</h1>
+      <h2>{{project.name}}</h2>
+      <p>Email: {{project.email}}</p>
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <ul class="nav navbar-nav navbar-left">
+                  <li><a [routerLink]="['/project/new/', userProjects[0].createdBy]">New Post</a></li>
+                  <li><a href="">Edit User Profile</a></li>
+                  <li><a href="">Delete user</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="navbar-right"><a href="">Logout</a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="myprojects"></div>
+        <div class="text-left panel panel-info">
+            <div class="panel-heading">
+                <h4>My Blogs</h4>
+            </div>
+              <div class="panel-body" *ngFor="let project of userProjects">
+                  <a [routerLink]="['/project/',  project._id]">{{project.projectName}} {{project._id}} Last Post: {{project.modifiedOn}}
+                  </a>
+              </div>
+              <div class="panel-body" *ngIf="!userProjects">
+                <p>You do not have any blogs!</p>
+              </div>
+        </div>
+    </div>
+</div>
+

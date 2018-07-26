@@ -1,0 +1,50 @@
+<!-- components/project-form/project-form.component.html-->
+
+<div class="container">
+
+  <div class="col-sm-6 col-sm-offset-3">
+
+  <!-- <h1>{{title}}</h1> -->
+  <!-- <h2>{{subtitle}}</h2> -->
+  <h2>{{user.name}}</h2>
+  <p>Email: {{user.email}}</p>
+
+
+  <form id="frmProject" method="post" action="POST" enctype="application/x-www-form-urlencoded" (ngSubmit)="addProject()">
+
+      <input type="hidden" name="_method" value="{{method}}">
+
+      <label for="projectName">Post Title</label>
+      <input type="text" id="projectName" name="projectName" value="{{newProject.projectName}}" [(ngModel)]="newProject.projectName">
+
+      <br />
+      <br />
+
+      <div>
+          <label for="blogArea">Blog</label>
+      </div>
+      <div>
+          <textarea  type="text" id="tasks" name="tasks" class="form-control" name="tasks" rows="4"  placeholder="Start Blog Here" [(ngModel)]="newProject.tasks">{{newProject.tasks}}</textarea><br />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Post</button>
+
+      <!-- <input type="submit" value="{{buttonText}}" id="submitBtn"><br /> -->
+  </form>
+  <br />
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <ul class="nav navbar-nav navbar-left">
+              <li><a href="/user">View All Blogs</a></li>
+              <li><a href="/user/edit">Edit Profile</a></li>
+              <li><a href="/logout">Logout</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  </div>
+
+</div>
