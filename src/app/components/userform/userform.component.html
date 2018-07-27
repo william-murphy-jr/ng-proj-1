@@ -10,18 +10,18 @@
 
       <form id="frmUserProfile" method="POST" action="POST" (ngSubmit)="addNewUser()" enctype="application/x-www-form-urlencoded">
 
-          <input type="hidden" name="_method" value="{{method}}">
+          <input type="hidden" name="_method" value="POST">
           <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newUser.name" value="{{name}}">
+              <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newUser.name" value="{{newUser.name}}">
           </div>
           <div class="form-group">
               <label for="name">Password</label>
-              <input type="password" name="password" id="password"  class="form-control" [(ngModel)]="newUser.password" value="{{password}}">
+              <input type="password" name="password" id="password"  class="form-control" [(ngModel)]="newUser.password" value="{{newUser.password}}">
           </div>
           <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email"  class="form-control" [(ngModel)]="newUser.email" name="email" value="{{email}}">
+              <input type="email" id="email"  class="form-control" [(ngModel)]="newUser.email" name="email" value="{{newUser.email}}">
           </div>
 
           <div class="form-group">

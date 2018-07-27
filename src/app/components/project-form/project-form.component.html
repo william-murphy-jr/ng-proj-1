@@ -12,7 +12,7 @@
 
   <form id="frmProject" method="post" action="POST" enctype="application/x-www-form-urlencoded" (ngSubmit)="addProject()">
 
-      <input type="hidden" name="_method" value="{{method}}">
+      <input type="hidden" name="_method" value="POST">
 
       <label for="projectName">Post Title</label>
       <input type="text" id="projectName" name="projectName" value="{{newProject.projectName}}" [(ngModel)]="newProject.projectName">
